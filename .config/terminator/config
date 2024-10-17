@@ -1,0 +1,74 @@
+[global_config]
+  dbus = False
+  handle_size = 10
+  borderless = True
+  extra_styling = False
+  hide_from_taskbar = True
+  title_transmit_fg_color = "#000000"
+  title_transmit_bg_color = "#f9f06b"
+  title_inactive_bg_color = "#62a0ea"
+  inactive_color_offset = 0.9047619047619048
+  suppress_multiple_term_dialog = True
+  title_use_system_font = False
+  title_font = Sans 5
+[keybindings]
+  hide_window = <Super>h
+  help = <Primary><Shift>F1
+[profiles]
+  [[default]]
+    background_darkness = 0.75
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#aaaaaa"
+    font = 0xProto Nerd Font Mono 15
+    foreground_color = "#ebdbb2"
+    show_titlebar = False
+    scrollbar_position = hidden
+    exit_action = restart
+    palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
+    login_shell = True
+    use_system_font = False
+    background_image = /home/fabrice/Downloads/gruv.jpg
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+  [[stats]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = False
+      fullscreen = False
+      size = 959, 1200
+      title = htop
+      last_active_term = f6a2a6fc-07cb-45b0-8816-fe64ae406f1f
+      last_active_window = True
+    [[[child1]]]
+      type = VPaned
+      parent = child0
+      order = 0
+      position = 598
+      ratio = 0.500418410041841
+    [[[terminal2]]]
+      type = Terminal
+      parent = child1
+      order = 0
+      profile = default
+      uuid = 85b44646-f498-4ddc-b87a-5e4ea15543f0
+      command = nvtop
+      directory = ""
+    [[[terminal3]]]
+      type = Terminal
+      parent = child1
+      order = 1
+      profile = default
+      uuid = f6a2a6fc-07cb-45b0-8816-fe64ae406f1f
+      command = htop
+      directory = ""
+[plugins]
